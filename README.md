@@ -1,4 +1,4 @@
-# URL Open
+# URL Utils
 
 Utilities to share shortcut links to web pages between MS Windows and Linux:
 * **url-open** -- Opens MS Windows .url shortcuts in Linux, using the default web browser.
