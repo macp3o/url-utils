@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Opens Windows .url shortcuts on Linux
+#
+
+URL=`sed -ne 's/^URL=\(.*\)$/\1/p' "$1"`
+
+xdg-open "$URL" \
+	|| gnome-open "$URL" || kde-open "$URL" \
+	|| htmlview "$URL" || sensible-browser "$URL"
+

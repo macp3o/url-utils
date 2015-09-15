@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Converts Linux links to  Windows .url shortcuts
+#
+
+if [ -z "$1" -o "$1" = "-h" -o "$1" = "--help" ]; then
+	echo 'Usage: link2url LINK_FILE [URL_FILE]'
+	echo "Converts a Linux Desktop link file into a Windows .url shortcut file"
+	echo 'If no URL_FILE is specified, LINK_FILE.url is created'
+else
+	URLFILE=${$2:-$1.url}
+	sed '1s/Desktop Entry/InternetShortcut/' "$1" > "$URLFILE" 
+fi
+
+
