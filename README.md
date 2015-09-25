@@ -10,7 +10,7 @@ Utilities to share shortcut links to web pages between MS Windows and Linux:
 	$  chmod u+x url-open link2url
 ~~~
 * Move the files to `~/bin` or `/usr/local/bin`
-* Double-click on a .url shortcut file and associate it with `url-open`; check the 'Always open with this program' box.
+* Double-click on a .url shortcut file and associate it with `url-open`; check the 'Always open with this program' box, if the option exists.
 
 ## How it works
 MS Windows .url shortcuts are text files with a list of `name = value` assignments. The URL name contains the URL to the web page.
