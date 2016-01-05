@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Opens Apple .webloc shortcuts on Linux
+#
+
+# parse an Apple .webloc shortcut
+URL=`sed -ne 's/^[ \t]*<string>\(.*\)<\/string>$/\1/p' "$1"`
+
+xdg-open "$URL" \
+	|| gnome-open "$URL" || kde-open "$URL" \
+	|| htmlview "$URL" || sensible-browser "$URL"
+
