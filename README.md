@@ -8,7 +8,7 @@ Utilities to share shortcut links to web pages between MS Windows and Linux:
 ## Installation
 * Make the files executable:
 ~~~bash
-	$  chmod u+x url-open webloc-open link2url
+$  chmod u+x url-open webloc-open link2url
 ~~~
 * Move the files to `~/bin` or `/usr/local/bin`
 * Double-click on a .url shortcut file and associate it with `url-open`, checking the 'Always open with this program' box, if the option exists.
@@ -19,18 +19,18 @@ MS Windows .url shortcuts are text files with a list of `name = value` assignmen
 
 Here's an example of the contents of a Windows .url file linking to google.com:
 ~~~
-	[InternetShortcut]
-	URL=https://www.google.com/?gws_rd=ssl
+[InternetShortcut]
+URL=https://www.google.com/?gws_rd=ssl
 ~~~
 
 And, the equivalent Linux Desktop link file:
 ~~~
-	[Desktop Entry]
-	Encoding=UTF-8
-	Name=Link to https://www.google.com/?gws_rd=ssl
-	Type=Link
-	URL=https://www.google.com/?gws_rd=ssl
-	Icon=text-xml
+[Desktop Entry]
+Encoding=UTF-8
+Name=Link to https://www.google.com/?gws_rd=ssl
+Type=Link
+URL=https://www.google.com/?gws_rd=ssl
+Icon=text-xml
 ~~~
 
 The `url-open` script extracts the URL value from the shortcut file and then opens it. Since different Linux distributions can use different methods to open a URL in the default web browser, we attempt different common strategies.
@@ -43,10 +43,10 @@ The `link2url` script replaces the first line in the Linux Desktop version to ma
 * `url-open` and `webloc-open` are used seamlessly from the Desktop. After associating the corresponding script with .url or .webloc files, the links should just work when double clicked.
 * `link2url` is expected to be used from a terminal prompt:
 ~~~bash
-	$  link2url -h
-	Usage: link2url LINK_FILE [URL_FILE]
-	Converts a Linux Desktop link file into a Windows .url shortcut file
-	If no URL_FILE is specified, LINK_FILE.url is created
+$  link2url -h
+Usage: link2url LINK_FILE [URL_FILE]
+Converts a Linux Desktop link file into a Windows .url shortcut file
+If no URL_FILE is specified, LINK_FILE.url is created
 ~~~
 
 ## License
